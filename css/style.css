@@ -1,0 +1,971 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	background-color: #1e1e1e;
+	color: #fff;
+	line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Orbitron', sans-serif;
+}
+
+/* Header */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 40px;
+	background: linear-gradient(90deg, #ff4500, #1e1e1e);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+.header__logo {
+	font-size: 28px;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.header__nav {
+	display: flex;
+	align-items: center;
+}
+
+.header__menu {
+	display: flex;
+	list-style: none;
+}
+
+.header__item {
+	margin-left: 30px;
+}
+
+.header__link {
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	transition: color 0.3s;
+}
+
+.header__link:hover {
+	color: #ff4500;
+}
+
+.header__burger {
+	display: none;
+	flex-direction: column;
+	gap: 5px;
+	cursor: pointer;
+}
+
+.header__burger span {
+	width: 30px;
+	height: 3px;
+	background-color: #fff;
+	transition: all 0.3s;
+}
+
+/* Hero Section */
+.hero {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 120px 40px 60px;
+	background: url('images/hero-bg.jpg') no-repeat center/cover;
+}
+
+.hero__content {
+	max-width: 50%;
+}
+
+.hero__title {
+	font-size: 48px;
+	color: #ff4500;
+	margin-bottom: 20px;
+}
+
+.hero__text {
+	font-size: 18px;
+	color: #ccc;
+}
+
+.hero__image {
+	max-width: 45%;
+	border-radius: 10px;
+}
+
+/* World Section */
+.world {
+	padding: 60px 40px;
+	background-color: #2a2a2a;
+}
+
+.world__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 20px;
+}
+
+.world__text {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+.world__gallery {
+	display: flex;
+	gap: 20px;
+}
+
+.world__image {
+	width: 33%;
+	border-radius: 10px;
+}
+
+/* Gameplay Section */
+.gameplay {
+	padding: 60px 40px;
+	background: linear-gradient(45deg, #1e1e1e, #333);
+}
+
+.gameplay__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 20px;
+}
+
+.gameplay__text {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+.gameplay__image {
+	width: 100%;
+	max-height: 400px;
+	object-fit: cover;
+	object-position: bottom;
+	border-radius: 10px;
+}
+
+/* Factions Section */
+.factions {
+	padding: 60px 40px;
+	background-color: #2a2a2a;
+}
+
+.factions__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 20px;
+}
+
+.factions__text {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+.factions__cards {
+	display: flex;
+	gap: 20px;
+}
+
+.factions__card {
+	width: 50%;
+	text-align: center;
+}
+
+.factions__card-image {
+	width: 100%;
+	border-radius: 10px;
+}
+
+/* Customization Section */
+.customization {
+	padding: 60px 40px;
+}
+
+.customization__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 20px;
+}
+
+.customization__text {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+.customization__image {
+	width: 100%;
+	max-height: 400px;
+	object-fit: cover;
+	object-position: bottom;
+	border-radius: 10px;
+}
+/* Story Section */
+.story {
+	padding: 60px 40px;
+	background-color: #2a2a2a;
+}
+
+.story__wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	gap: 40px;
+	align-items: center;
+}
+
+.story__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 20px;
+}
+
+.story__text {
+	font-size: 18px;
+	flex: 1;
+}
+
+.story__image {
+	max-width: 50%;
+	border-radius: 10px;
+}
+
+/* Locations Section */
+.locations {
+	padding: 60px 40px;
+	background: linear-gradient(135deg, #1e1e1e, #333);
+}
+
+.locations__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.locations__text {
+	font-size: 18px;
+	max-width: 800px;
+	margin: 0 auto 30px;
+	text-align: center;
+}
+
+.locations__grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+}
+
+.locations__image {
+	width: 100%;
+	border-radius: 10px;
+}
+
+/* Features Section */
+.features {
+	padding: 60px 40px;
+	background-color: #2a2a2a;
+}
+
+.features__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.features__list {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.features__item {
+	flex: 1;
+	text-align: center;
+}
+
+.features__image {
+	width: 100%;
+	max-height: 200px;
+	object-fit: cover;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+
+.features__text {
+	font-size: 16px;
+}
+
+/* Vision Section */
+.vision {
+	padding: 60px 40px;
+	background: radial-gradient(circle, #333, #1e1e1e);
+}
+
+.vision__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 20px;
+}
+
+.vision__text {
+	font-size: 18px;
+	max-width: 800px;
+	margin-bottom: 30px;
+}
+
+.vision__image {
+	width: 100%;
+	max-height: 400px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+/* Driving Section */
+.driving {
+	padding: 60px 40px;
+	background: linear-gradient(90deg, #2a2a2a, #1e1e1e);
+}
+
+.driving__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 20px;
+}
+
+.driving__content {
+	display: flex;
+	gap: 30px;
+	align-items: center;
+}
+
+.driving__text {
+	flex: 1;
+	font-size: 18px;
+}
+
+.driving__image {
+	max-width: 50%;
+	border-radius: 10px;
+}
+
+/* Combat Section */
+.combat {
+	padding: 60px 40px;
+	background-color: #333;
+}
+
+.combat__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.combat__text {
+	font-size: 18px;
+	max-width: 800px;
+	margin: 0 auto 30px;
+	text-align: center;
+}
+
+.combat__gallery {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+}
+
+.combat__image {
+	width: 30%;
+	border-radius: 10px;
+}
+
+/* Modes Section */
+.modes {
+	padding: 60px 40px;
+	background: radial-gradient(circle, #1e1e1e, #2a2a2a);
+}
+
+.modes__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.modes__cards {
+	display: flex;
+	gap: 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.modes__card {
+	flex: 1;
+	background-color: #333;
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+}
+
+.modes__card-image {
+	width: 100%;
+	max-height: 150px;
+	object-fit: cover;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+
+.modes__card-title {
+	font-size: 24px;
+	color: #ff4500;
+	margin-bottom: 10px;
+}
+
+.modes__card-text {
+	font-size: 16px;
+}
+
+/* Tracks Section */
+.tracks {
+	padding: 60px 40px;
+	background-color: #2a2a2a;
+}
+
+.tracks__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 20px;
+}
+
+.tracks__text {
+	font-size: 18px;
+	max-width: 1000px;
+	margin-bottom: 30px;
+}
+
+.tracks__image {
+	width: 100%;
+	max-height: 400px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+/* Contacts Hero Section */
+.contacts-hero {
+	padding: 100px 40px 40px;
+	background-color: #2a2a2a;
+	text-align: center;
+}
+
+.contacts-hero__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 15px;
+}
+
+.contacts-hero__text {
+	font-size: 18px;
+	color: #ccc;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+/* Form Section */
+.form {
+	padding: 60px 40px;
+	background: linear-gradient(45deg, #1e1e1e, #333);
+}
+
+.form__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.form__content {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.form__group {
+	margin-bottom: 20px;
+}
+
+.form__label {
+	display: block;
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 5px;
+}
+
+.form__input,
+.form__textarea {
+	width: 100%;
+	padding: 10px;
+	background-color: #444;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 16px;
+}
+
+.form__textarea {
+	height: 150px;
+	resize: none;
+}
+
+.form__button {
+	display: block;
+	width: 100%;
+	padding: 12px;
+	background-color: #ff4500;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Orbitron', sans-serif;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.form__button:hover {
+	background-color: #e03e00;
+}
+
+/* Info Section */
+.info {
+	padding: 60px 40px;
+	background-color: #2a2a2a;
+}
+
+.info__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.info__list {
+	display: flex;
+	justify-content: space-between;
+	max-width: 800px;
+	margin: 0 auto;
+	gap: 20px;
+}
+
+.info__item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.info__icon {
+	width: 30px;
+	height: 30px;
+}
+
+.info__text {
+	font-size: 16px;
+	color: #ccc;
+}
+
+/* Social Section */
+.social {
+	padding: 60px 40px;
+	background: radial-gradient(circle, #333, #1e1e1e);
+}
+
+.social__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.social__text {
+	font-size: 18px;
+	max-width: 600px;
+	margin: 0 auto 30px;
+	text-align: center;
+}
+
+.social__links {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.social__link {
+	display: block;
+}
+
+.social__icon {
+	width: 40px;
+	height: 40px;
+	transition: transform 0.3s;
+}
+
+.social__link:hover .social__icon {
+	transform: scale(1.1);
+}
+
+/* FAQ Section */
+.faq {
+	padding: 60px 40px;
+	background-color: #333;
+}
+
+.faq__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 20px;
+}
+
+.faq__text {
+	font-size: 18px;
+	max-width: 800px;
+	margin-bottom: 30px;
+}
+
+.faq__items {
+	max-width: 800px;
+}
+
+.faq__item {
+	margin-bottom: 20px;
+}
+
+.faq__question {
+	font-size: 20px;
+	color: #ff4500;
+	margin-bottom: 10px;
+}
+
+.faq__answer {
+	font-size: 16px;
+	color: #ccc;
+}
+/* Policy Header */
+.policy-header {
+	padding: 20px 40px;
+	background: linear-gradient(90deg, #ff4500, #1e1e1e);
+}
+
+.policy-header__logo {
+	font-size: 28px;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+/* Policy Section */
+.policy {
+	padding: 60px 40px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.policy__title {
+	font-size: 36px;
+	color: #ff4500;
+	margin-bottom: 30px;
+}
+
+.policy__list {
+	list-style: decimal;
+}
+
+.policy__item {
+	margin-bottom: 30px;
+}
+
+.policy__item-title {
+	font-size: 20px;
+	color: #ff4500;
+	margin-bottom: 10px;
+}
+
+.policy__item-text {
+	font-size: 16px;
+	color: #ccc;
+}
+
+/* Policy Footer */
+.policy-footer {
+	padding: 20px 40px;
+	background-color: #333;
+	text-align: center;
+}
+
+.policy-footer__links {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.policy-footer__link {
+	color: #ccc;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+.policy-footer__link:hover {
+	color: #ff4500;
+}
+
+/* Footer */
+.footer {
+	padding: 60px 40px 20px;
+	background: linear-gradient(180deg, #333, #1e1e1e);
+}
+
+.footer__content {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+	margin-bottom: 40px;
+}
+
+.footer__section {
+	max-width: 30%;
+}
+
+.footer__title {
+	font-size: 24px;
+	color: #ff4500;
+	margin-bottom: 20px;
+}
+
+.footer__text {
+	font-size: 16px;
+	color: #ccc;
+}
+
+.footer__links {
+	list-style: none;
+}
+
+.footer__link {
+	color: #ccc;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 2;
+}
+
+.footer__link:hover {
+	color: #ff4500;
+}
+
+.footer__bottom {
+	text-align: center;
+	color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.header {
+		padding: 20px;
+	}
+
+	.header__menu {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: #1e1e1e;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.header__menu--active {
+		display: flex;
+	}
+
+	.header__item {
+		margin: 20px 0;
+	}
+
+	.header__burger {
+		display: flex;
+	}
+
+	.header__burger--active span:nth-child(1) {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+
+	.header__burger--active span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.header__burger--active span:nth-child(3) {
+		transform: rotate(-45deg) translate(7px, -7px);
+	}
+
+	.hero {
+		flex-direction: column;
+		padding: 100px 20px 40px;
+	}
+
+	.hero__content {
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.hero__title {
+		font-size: 36px;
+	}
+
+	.hero__image {
+		max-width: 100%;
+		margin-top: 20px;
+	}
+
+	.world,
+	.gameplay,
+	.factions,
+	.customization {
+		padding: 40px 20px;
+	}
+
+	.world__gallery {
+		flex-direction: column;
+	}
+
+	.world__image {
+		width: 100%;
+	}
+
+	.factions__cards {
+		flex-direction: column;
+	}
+
+	.factions__card {
+		width: 100%;
+	}
+
+	.footer__content {
+		flex-direction: column;
+	}
+
+	.footer__section {
+		max-width: 100%;
+	}
+
+	.story,
+	.locations,
+	.features,
+	.vision {
+		padding: 40px 20px;
+	}
+
+	.story__wrapper {
+		flex-direction: column;
+	}
+
+	.story__image {
+		max-width: 100%;
+	}
+
+	.locations__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.features__list {
+		flex-direction: column;
+	}
+
+	.features__item {
+		margin-bottom: 20px;
+	}
+
+	.driving,
+	.combat,
+	.modes,
+	.tracks {
+		padding: 40px 20px;
+	}
+
+	.driving__content {
+		flex-direction: column;
+	}
+
+	.driving__image {
+		max-width: 100%;
+	}
+
+	.combat__gallery {
+		flex-direction: column;
+	}
+
+	.combat__image {
+		width: 100%;
+	}
+
+	.modes__cards {
+		flex-direction: column;
+	}
+
+	.contacts-hero {
+		padding: 80px 20px 20px;
+	}
+
+	.contacts-hero__title {
+		font-size: 28px;
+	}
+
+	.form,
+	.info,
+	.social,
+	.faq {
+		padding: 40px 20px;
+	}
+
+	.info__list {
+		flex-direction: column;
+	}
+
+	.social__links {
+		gap: 15px;
+	}
+
+	.social__icon {
+		width: 35px;
+		height: 35px;
+	}
+
+	.policy-header {
+		padding: 20px;
+	}
+
+	.policy {
+		padding: 40px 20px;
+	}
+
+	.policy-footer {
+		padding: 20px;
+	}
+
+	.policy-footer__links {
+		flex-direction: column;
+		gap: 10px;
+	}
+}

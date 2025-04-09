@@ -1,3 +1,16 @@
+@font-face {
+	font-family: 'Orbitron';
+	font-style: normal;
+	font-weight: 400;
+	src: url(../fonts/Orbitron-Regular.ttf) format(truetype);
+}
+@font-face {
+	font-family: 'Roboto Condensed';
+	font-style: normal;
+	font-weight: 400;
+	src: url(../fonts/RobotoCondensed-Regular.ttf) format(truetype);
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -17,7 +30,6 @@ h3 {
 	font-family: 'Orbitron', sans-serif;
 }
 
-/* Header */
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -35,6 +47,10 @@ h3 {
 	font-weight: 700;
 	color: #fff;
 	text-transform: uppercase;
+}
+
+.header__logo img {
+	max-width: 160px;
 }
 
 .header__nav {
@@ -76,13 +92,11 @@ h3 {
 	transition: all 0.3s;
 }
 
-/* Hero Section */
 .hero {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 120px 40px 60px;
-	background: url('images/hero-bg.jpg') no-repeat center/cover;
 }
 
 .hero__content {
@@ -105,7 +119,6 @@ h3 {
 	border-radius: 10px;
 }
 
-/* World Section */
 .world {
 	padding: 60px 40px;
 	background-color: #2a2a2a;
@@ -132,7 +145,6 @@ h3 {
 	border-radius: 10px;
 }
 
-/* Gameplay Section */
 .gameplay {
 	padding: 60px 40px;
 	background: linear-gradient(45deg, #1e1e1e, #333);
@@ -157,7 +169,6 @@ h3 {
 	border-radius: 10px;
 }
 
-/* Factions Section */
 .factions {
 	padding: 60px 40px;
 	background-color: #2a2a2a;
@@ -189,7 +200,6 @@ h3 {
 	border-radius: 10px;
 }
 
-/* Customization Section */
 .customization {
 	padding: 60px 40px;
 }
@@ -212,7 +222,6 @@ h3 {
 	object-position: bottom;
 	border-radius: 10px;
 }
-/* Story Section */
 .story {
 	padding: 60px 40px;
 	background-color: #2a2a2a;
@@ -222,6 +231,7 @@ h3 {
 	max-width: 1200px;
 	margin: 0 auto;
 	display: flex;
+	flex-direction: column;
 	gap: 40px;
 	align-items: center;
 }
@@ -242,7 +252,6 @@ h3 {
 	border-radius: 10px;
 }
 
-/* Locations Section */
 .locations {
 	padding: 60px 40px;
 	background: linear-gradient(135deg, #1e1e1e, #333);
@@ -273,7 +282,6 @@ h3 {
 	border-radius: 10px;
 }
 
-/* Features Section */
 .features {
 	padding: 60px 40px;
 	background-color: #2a2a2a;
@@ -311,7 +319,6 @@ h3 {
 	font-size: 16px;
 }
 
-/* Vision Section */
 .vision {
 	padding: 60px 40px;
 	background: radial-gradient(circle, #333, #1e1e1e);
@@ -335,7 +342,6 @@ h3 {
 	object-fit: cover;
 	border-radius: 10px;
 }
-/* Driving Section */
 .driving {
 	padding: 60px 40px;
 	background: linear-gradient(90deg, #2a2a2a, #1e1e1e);
@@ -363,7 +369,6 @@ h3 {
 	border-radius: 10px;
 }
 
-/* Combat Section */
 .combat {
 	padding: 60px 40px;
 	background-color: #333;
@@ -394,7 +399,6 @@ h3 {
 	border-radius: 10px;
 }
 
-/* Modes Section */
 .modes {
 	padding: 60px 40px;
 	background: radial-gradient(circle, #1e1e1e, #2a2a2a);
@@ -440,7 +444,6 @@ h3 {
 	font-size: 16px;
 }
 
-/* Tracks Section */
 .tracks {
 	padding: 60px 40px;
 	background-color: #2a2a2a;
@@ -462,9 +465,9 @@ h3 {
 	width: 100%;
 	max-height: 400px;
 	object-fit: cover;
+	object-position: bottom;
 	border-radius: 10px;
 }
-/* Contacts Hero Section */
 .contacts-hero {
 	padding: 100px 40px 40px;
 	background-color: #2a2a2a;
@@ -484,7 +487,6 @@ h3 {
 	margin: 0 auto;
 }
 
-/* Form Section */
 .form {
 	padding: 60px 40px;
 	background: linear-gradient(45deg, #1e1e1e, #333);
@@ -547,7 +549,6 @@ h3 {
 	background-color: #e03e00;
 }
 
-/* Info Section */
 .info {
 	padding: 60px 40px;
 	background-color: #2a2a2a;
@@ -563,7 +564,7 @@ h3 {
 .info__list {
 	display: flex;
 	justify-content: space-between;
-	max-width: 800px;
+	max-width: 840px;
 	margin: 0 auto;
 	gap: 20px;
 }
@@ -584,7 +585,6 @@ h3 {
 	color: #ccc;
 }
 
-/* Social Section */
 .social {
 	padding: 60px 40px;
 	background: radial-gradient(circle, #333, #1e1e1e);
@@ -624,7 +624,6 @@ h3 {
 	transform: scale(1.1);
 }
 
-/* FAQ Section */
 .faq {
 	padding: 60px 40px;
 	background-color: #333;
@@ -660,7 +659,6 @@ h3 {
 	font-size: 16px;
 	color: #ccc;
 }
-/* Policy Header */
 .policy-header {
 	padding: 20px 40px;
 	background: linear-gradient(90deg, #ff4500, #1e1e1e);
@@ -672,8 +670,9 @@ h3 {
 	color: #fff;
 	text-transform: uppercase;
 }
-
-/* Policy Section */
+.policy-header__logo img {
+	max-width: 160px;
+}
 .policy {
 	padding: 60px 40px;
 	max-width: 800px;
@@ -705,7 +704,6 @@ h3 {
 	color: #ccc;
 }
 
-/* Policy Footer */
 .policy-footer {
 	padding: 20px 40px;
 	background-color: #333;
@@ -729,7 +727,6 @@ h3 {
 	color: #ff4500;
 }
 
-/* Footer */
 .footer {
 	padding: 60px 40px 20px;
 	background: linear-gradient(180deg, #333, #1e1e1e);
@@ -777,7 +774,6 @@ h3 {
 	color: #666;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
 	.header {
 		padding: 20px;
@@ -925,7 +921,7 @@ h3 {
 	}
 
 	.contacts-hero {
-		padding: 80px 20px 20px;
+		padding: 100px 20px 20px;
 	}
 
 	.contacts-hero__title {
